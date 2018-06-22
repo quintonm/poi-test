@@ -3,7 +3,7 @@ repositories {
 }
 
 ext {
-    poi_version = '3.16'
+    poi_version = '3.17'
     junit_version = '4.12'
 }
 
@@ -11,8 +11,17 @@ apply plugin: 'java'
 
 dependencies {
 
-    implementation "org.apache.poi:poi:${poi_version}"
-    implementation "org.apache.poi:poi-ooxml:${poi_version}"
+//    implementation "org.apache.poi:poi:${poi_version}"
+//    implementation "org.apache.poi:poi-ooxml:${poi_version}"
+    implementation files('poi-4.0.0-SNAPSHOT/poi-4.0.0-SNAPSHOT.jar',
+        'poi-4.0.0-SNAPSHOT/poi-ooxml-schemas-4.0.0-SNAPSHOT.jar',
+        'poi-4.0.0-SNAPSHOT/poi-ooxml-4.0.0-SNAPSHOT.jar',
+    )
+    implementation 'com.github.virtuald:curvesapi:1.04'
+    implementation 'org.apache.xmlbeans:xmlbeans:2.6.0'
+    implementation 'commons-codec:commons-codec:1.10'
+    implementation 'org.apache.commons:commons-collections4:4.1'
+    implementation 'org.apache.commons:commons-compress:1.17'
     testImplementation "junit:junit:${junit_version}"
 }
 
