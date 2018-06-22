@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%-4relative [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!--<logger name="com.iscs" level="DEBUG"/>-->
+    <!--<logger name="com.guidewire" level="DEBUG"/>-->
+    <!--&lt;!&ndash; set to DEBUG to log request/response payload (body only) &ndash;&gt;-->
+    <!--<logger name="org.apache.http.wire" level="ERROR"/>-->
+    <!--&lt;!&ndash; set to DEBUG to log request/response headers &ndash;&gt;-->
+    <!--<logger name="org.apache.http.headers" level="ERROR"/>-->
+
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
+

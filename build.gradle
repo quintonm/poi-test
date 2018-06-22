@@ -1,0 +1,20 @@
+repositories {
+    mavenCentral()
+}
+
+ext {
+    poi_version = '3.16'
+    junit_version = '4.12'
+}
+
+apply plugin: 'java'
+
+dependencies {
+
+    implementation "org.apache.poi:poi:${poi_version}"
+    implementation "org.apache.poi:poi-ooxml:${poi_version}"
+    testImplementation "junit:junit:${junit_version}"
+}
+
+
+
